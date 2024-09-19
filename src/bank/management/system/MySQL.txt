@@ -1,0 +1,32 @@
+
+
+// MySQL code for Bank Management System
+
+
+
+
+create database mybank;
+use mybank;
+create table signup(form_no varchar(30), name varchar(30),DOB varchar(30),gender varchar(30),email varchar(60),martial_status varchar(30),address varchar(120),pincode varchar(40),city varchar(50),state varchar(70));
+select * from signup;
+ALTER TABLE signup
+ADD COLUMN pincode VARCHAR(50) AFTER address;
+select * from signup;
+alter table signup
+ADD COLUMN father_name VARCHAR(60) after name;
+alter table signup
+ADD COLUMN mother_name VARCHAR(60) after father_name;
+select * from signup;
+
+create table signup_two(form_no varchar(30), Adhaar_no varchar(30),Pan_no varchar(30),Religion varchar(30),Category varchar(60),Income varchar(30),Education varchar(120),Occupation varchar(40),Existing_Acc varchar(50));
+select * from signup_two;
+
+create table accountdetail(form_no varchar(30), account_type varchar(30),req_services varchar(30),Card_no varchar(60),pin varchar(60));
+select * from accountdetail;
+
+create table login(form_no varchar(30),Card_no varchar(60),pin varchar(30));
+select * from login;
+
+create table bank(pin varchar(30),date varchar(50),type varchar(30), amount varchar(30));
+select * from bank;
+
